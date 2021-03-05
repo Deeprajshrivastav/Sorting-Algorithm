@@ -3,15 +3,11 @@
 def bubble_sort(List):
     length = len(List)
     for i in range(len(List)):
-        for j in range(length):
-            try:
-                if (List[j] > List[j+1]):              
-                    List[j], List[j+1] = List[j+1], List[j]         
-            except IndexError:
-                pass        
+        for j in range(length-1):
+            if (List[j] > List[j + 1]):
+                List[j], List[j + 1] = List[j + 1], List[j]
         length = length - 1   
     return List 
-
 
 # insertition sort
 def insert_sort(list):
